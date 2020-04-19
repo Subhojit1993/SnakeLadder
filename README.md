@@ -8,4 +8,4 @@
 
 # Developed using Vanilla JS
 
-# Start clicking on the roll dice
+# Start playing by clicking on the roll dice button
