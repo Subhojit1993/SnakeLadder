@@ -1,3 +1,8 @@
+html {
+  background: url("snake_ladder_background.jpg");
+  background-repeat: no-repeat, repeat;
+}
+
 #getCanvas {
   position: absolute;
   top: 50px;
@@ -25,9 +30,9 @@
 }
 
 .dice_section {
-  width: 640px;
   display: flex;
-  justify-content: center;
+  margin-top: 65%;
+  justify-content: flex-end;
 }
 
 .dice_button {
@@ -40,4 +45,144 @@
   border-radius: 25px;
   outline: none;
   border: none;
+  margin-right: 10%;
+  cursor: pointer;
+}
+
+.Board_part {
+  /*position: absolute;*/
+  transform: rotate(-90deg) scaleX(-1);
+  margin-top: 0%;
+  margin-left: -15%;
+  margin-right: 70%;
+  object-fit: scale-down;
+}
+
+.play_part_one {
+  display: inline-block;
+  width: 60%;
+  height: 170vh;
+  bottom: 0;
+}
+
+.Play_texts {
+  display: inline-block;
+  width: 30%;
+  height: 170vh;
+  bottom: 0;
+  position: sticky;
+}
+
+.board_section {
+  margin-top: 45%;
+}
+
+.margin_0 {
+  margin: 0;
+}
+
+.instructions_text {
+  margin: 20% 0px;
+  margin-bottom: 10px;
+}
+
+.text_font {
+  font-family: 'Montserrat';
+  color: #B2FF66;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.cls__inputIo {
+  position: relative;
+  padding: 15px 0 0;
+  margin-top: 10px;
+  width: 90%;
+}
+
+.cls__inputField {
+  font-family: inherit;
+  width: 100%;
+  border: 0;
+  border-bottom: 2px solid #00CCCC;
+  outline: 0;
+  font-size: 1.3rem;
+  color: #FFFFFF;
+  padding: 7px 0;
+  background: transparent;
+  transition: border-color 0.2s;
+
+  &::placeholder {
+    color: transparent;
+  }
+
+  &:placeholder-shown ~ .cls__label {
+    font-size: 1.3rem;
+    cursor: text;
+    top: 20px;
+  }
+}
+
+.cls__label {
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 0.2s;
+  font-size: 1rem;
+  color: #00CCCC;
+}
+
+.cls__label:focus {
+  ~ .cls__label {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 1rem;
+    color: #800000;
+    font-weight:700;    
+  }
+  padding-bottom: 6px;  
+  font-weight: 700;
+  border-width: 3px;
+  border-image: linear-gradient(to right, #800000,#00CCCC);
+  border-image-slice: 1;
+}
+/* reset input */
+.cls__inputField{
+  &:required,&:invalid { box-shadow:none; }
+}
+
+.cls__inputIo__outer {
+  font-family: 'Montserrat';
+  min-height: 10vh;
+  font-size: 1.5rem;
+  margin: 15px 25%;
+}
+
+.cls__inputIo__button__outer {
+  margin: 15px 25%;
+  text-align: left;
+}
+
+.cls__inputIo__button {
+  padding: 10px 40px;
+  font-size: 17px;
+  font-family: 'Montserrat';
+  color: #FFFFFF;
+  background: #008080;
+  border: none;
+  border-radius: 25px;
+  font-weight: 200;
+  cursor: pointer;
+  z-index: 999;
+}
+
+.cls_inputFieldsDiv__outer {
+  margin: 10% 15%;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.cls_inputFieldsDiv {
+  padding: 3% 0;
 }
