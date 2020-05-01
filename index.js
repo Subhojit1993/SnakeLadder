@@ -56,6 +56,7 @@ var gamePartDiv = document.getElementById('gamePartDiv');
 var errorOneDiv = document.getElementById('errorOneDiv');
 var errorTwoDiv = document.getElementById('errorTwoDiv');
 var onSubmitPlay = document.getElementById('onSubmit_25042020');
+var onSubmitPlayers = document.getElementById('onSubmit_01052020');
 var playerOneId = document.getElementById('playerOneId');
 var playerTwoId = document.getElementById('playerTwoId');
 var playerRolled = document.getElementById('playerRolled');
@@ -65,6 +66,7 @@ var rolledText = document.getElementById('rolledText');
 playerOneId.addEventListener('change', updateInputOne);
 playerTwoId.addEventListener('change', updateInputTwo);
 onSubmitPlay.addEventListener('click', submitPlay);
+onSubmitPlayers.addEventListener('click', submitPlayers);
 
 function updateInputOne(e) {
 	console.log(e.target.value);
@@ -111,11 +113,17 @@ function handleButtonDisabled(playerOne, playerTwo) {
 function submitPlay(e) {
 	// e.preventDefault();
 	console.log(e.currentTarget.id);
-	if(e.currentTarget.id) {
+	if(e.currentTarget.id && playerText_1 != '' && playerText_2 != '') {
 		playGame = true;
 	}
 
 	letsPlayGame(playGame);
+}
+
+function submitPlayers(e) {
+	if(playerText_1 != '' && playerText_2 != '') {
+		onSubmitPlayers.innerHTML = "Submitted players!";
+	}
 }
 
 inputFieldsDiv.style.display = "block";
