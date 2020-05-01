@@ -181,6 +181,14 @@ html {
   outline: none;
 }
 
+.error_text {
+  font-family: 'Montserrat';
+  color: #FFFFFF;
+  font-size: 14px;
+  font-weight: 900;
+  margin: 8px 0;
+}
+
 .cls_inputFieldsDiv__outer {
   margin: 10% 15%;
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);

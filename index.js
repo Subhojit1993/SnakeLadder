@@ -73,7 +73,7 @@ function updateInputOne(e) {
 	playerText_1 = '';
 	if(e.target.value && e.target.value != '') {
 		let pattern = /^[A-Za-z]+$/;
-		errorOneDiv.innerHTML = 'Only text is allowed';
+		errorOneDiv.innerHTML = 'Only Text is allowed!';
 		if(pattern.test(e.target.value)) {
 			playerText_1 = e.target.value;
 			playerOneId.value = playerText_1;
@@ -91,7 +91,7 @@ function updateInputTwo(e) {
 	playerText_2 = '';
 	if(e.target.value && e.target.value != '') {
 		let pattern = /^[A-Za-z]+$/;
-		errorTwoDiv.innerHTML = 'Only text is allowed';
+		errorTwoDiv.innerHTML = 'Only Text is allowed!';
 		if(pattern.test(e.target.value)) {
 			playerText_2 = e.target.value;
 			playerTwoId.value = playerText_2;
