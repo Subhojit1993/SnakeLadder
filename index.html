@@ -8,32 +8,44 @@
 <body>
 	<div id="inputFieldsDiv" class="cls_inputFieldsDiv__outer">
 		<div class="cls_inputFieldsDiv">
-			<div class="cls__inputIo__outer">
-				<div class="cls__inputIo inputField">
-					<input id="playerOneId" class="cls__inputField" type="input" name="player1" required/>
-					<label for="player1" class="cls__label">Player 1</label>
+			<div id="div_1092">
+				<div class="cls__inputIo__outer">
+					<div class="cls__inputIo inputField">
+						<input id="playerOneId" class="cls__inputField" type="input" name="player1" required/>
+						<label for="player1" class="cls__label">Player 1</label>
+					</div>
+					<div id="errorOneDiv" class="error_text">
+					</div>
 				</div>
-				<div id="errorOneDiv" class="error_text">
+				<div class="cls__inputIo__outer">
+					<div class="cls__inputIo inputField">
+						<input id="playerTwoId" class="cls__inputField" type="input" name="player2" required/>
+						<label for="player2" class="cls__label">Player 2</label>
+					</div>
+					<div id="errorTwoDiv" class="error_text">
+					</div>
+				</div>
+				<br>
+				<div class="cls__inputIo__button__outer">
+					<button class="cls__inputIo__button" id="onSubmit_01052020" type="button">
+						Submit Players
+					</button>
 				</div>
 			</div>
-			<div class="cls__inputIo__outer">
-				<div class="cls__inputIo inputField">
-					<input id="playerTwoId" class="cls__inputField" type="input" name="player2" required/>
-					<label for="player2" class="cls__label">Player 2</label>
+			<div id="div_1093">
+				<div class="cls__inputIo__button__outer">
+					<button class="cls__inputIo__button" id="onSubmit_25042020" type="button">
+						Lets Play
+					</button>
 				</div>
-				<div id="errorTwoDiv" class="error_text">
-				</div>
-			</div>
-			<div class="cls__inputIo__button__outer">
-				<button class="cls__inputIo__button" id="onSubmit_01052020" type="button">
-					Submit Players
-				</button>
 			</div>
 			<br>
-			<div class="cls__inputIo__button__outer">
-				<button class="cls__inputIo__button" id="onSubmit_25042020" type="button">
-					Lets Play
-				</button>
+			<div id="div_1094">
+				<div class="cls__inputIo__button__outer">
+					<button class="cls__inputIo__button" id="onSubmit_02052020" type="button">
+						Go back
+					</button>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -59,7 +71,13 @@
 				<h3 id="rolledText" class="margin_0 text_font mobile_player_left"></h3>
 			</div>
 			<div class="dice_section">
-				<button onclick="handleRollDice()" class="dice_button">Roll Dice</button>
+				<div>
+					<button onclick="handleRollDice()" class="dice_button">Roll Dice</button>
+				</div>
+				<br>
+				<div>
+					<button onclick="handleQuitGame()" class="dice_button quit_color">Quit</button>
+				</div>
 			</div>
 		</div>
 	<div>

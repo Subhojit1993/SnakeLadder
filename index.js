@@ -61,12 +61,23 @@ var playerOneId = document.getElementById('playerOneId');
 var playerTwoId = document.getElementById('playerTwoId');
 var playerRolled = document.getElementById('playerRolled');
 var rolledText = document.getElementById('rolledText');
+var goBackButton = document.getElementById('onSubmit_02052020');
+
+var div_one = document.getElementById('div_1092');
+var div_two = document.getElementById('div_1093');
+var div_three = document.getElementById('div_1094');
 
 // add event listeners to the respective fields
 playerOneId.addEventListener('change', updateInputOne);
 playerTwoId.addEventListener('change', updateInputTwo);
 onSubmitPlay.addEventListener('click', submitPlay);
 onSubmitPlayers.addEventListener('click', submitPlayers);
+goBackButton.addEventListener('click', goBackClick);
+
+// controlling visibility
+div_one.style.display = "block";
+div_two.style.display = "none";
+div_three.style.display = "none";
 
 function updateInputOne(e) {
 	console.log(e.target.value);
@@ -122,13 +133,18 @@ function submitPlay(e) {
 
 function submitPlayers(e) {
 	if(playerText_1 != '' && playerText_2 != '') {
-		onSubmitPlayers.innerHTML = "Submitted players!";
+		onSubmitPlayers.innerHTML = "Submitted Players!";
+		div_one.style.display = "none";
+		div_two.style.display = "block";
+		div_three.style.display = "block";
 	}
 }
 
 inputFieldsDiv.style.display = "block";
 gamePartDiv.style.display = "none";
 function letsPlayGame(playGame) {
+	inputFieldsDiv.style.display = "block";
+	gamePartDiv.style.display = "none";
 	if(playGame) {
 		inputFieldsDiv.style.display = "none";
 		gamePartDiv.style.display = "block"; 
@@ -141,6 +157,26 @@ function mapPlayer(playerText, Id) {
 			player.name = playerText;
 		}
 	});
+}
+
+function goBackClick(e) {
+	div_one.style.display = "block";
+	div_two.style.display = "none";
+	div_three.style.display = "none";
+	onSubmitPlayers.innerHTML = "Submit Players!";
+}
+
+// handling quit functionality
+window.handleQuitGame = () => {
+	console.log("sdsd");
+	div_one.style.display = "block";
+	div_two.style.display = "none";
+	div_three.style.display = "none";
+	onSubmitPlayers.innerHTML = "Submit Players!";
+	playGame = false;
+	playerOneId.value = '';
+	playerTwoId.value = '';
+	letsPlayGame(playGame);
 }
 
 // handling click of the roll dice button

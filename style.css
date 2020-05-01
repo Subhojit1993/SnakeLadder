@@ -51,6 +51,12 @@ html {
   z-index: 999;
 }
 
+.dice_section .quit_color {
+  background: rgb(128,0,0);
+  color: #FFFFFF;
+  margin-left: 30px;
+}
+
 .Board_part {
   /*position: absolute;*/
   transform: rotate(-90deg) scaleX(-1);
